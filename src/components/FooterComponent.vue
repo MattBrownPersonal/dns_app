@@ -17,11 +17,15 @@
             <form action="">
                 <div class="flex flex-col py-20">
                     <!-- TODO: impliment form backend api -->
-                    <input type="text" class="rounded text-white input_box placeholder-white mb-6" placeholder="Name" />
                     <input type="text" class="rounded text-white input_box placeholder-white mb-6"
-                        placeholder="Email" />
+                        placeholder="Name" />
+                    <input type="email" class="rounded text-white input_box placeholder-white mb-6"
+                        placeholder="Email" required oninvalid="this.setCustomValidity('Please enter valid email')"
+                        oninput="this.setCustomValidity('')" />
                     <input type="text" class="rounded text-white input_box placeholder-white mb-6"
-                        placeholder="Telephone" />
+                        placeholder="Telephone" required
+                        oninvalid="this.setCustomValidity('Please enter valid telephone number')"
+                        oninput="this.setCustomValidity('')" />
                     <input type="text" class="rounded text-white input_box placeholder-white mb-6"
                         placeholder="Company" />
                     <input type="text" class="rounded text-white input_box placeholder-white mb-6"
